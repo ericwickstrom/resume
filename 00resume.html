@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eric Wickstrom - Resume</title>
+  <title>Eric Wickstrom - Software Developer</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -11,101 +11,109 @@
       line-height: 1.4;
       color: #333;
       background: white;
-      font-size: 12px;
+      font-size: 11px;
     }
     .container {
       max-width: 8.5in;
       margin: 0 auto;
-      padding: 0.6in;
+      padding: 0.4in;
     }
     .header { 
       text-align: center; 
-      margin-bottom: 24px; 
-      padding-bottom: 15px; 
-      border-bottom: 2px solid #2c5aa0; 
+      margin-bottom: 16px; 
+      padding-bottom: 12px; 
+      border-bottom: 2px solid #0066cc; 
     }
     .name { 
-      font-size: 26px; 
+      font-size: 24px; 
       font-weight: bold; 
-      color: #2c5aa0; 
-      margin-bottom: 10px; 
+      color: #0066cc; 
+      margin-bottom: 8px; 
     }
-    .contact-info { 
-      font-size: 12px; 
+    .title { 
+      font-size: 14px; 
       color: #666; 
-      margin-bottom: 6px; 
+      margin-bottom: 10px;
+      font-weight: 500;
     }
-    .contact-info a { 
-      color: #2c5aa0; 
+    .contact { 
+      font-size: 11px; 
+      color: #666; 
+    }
+    .contact a { 
+      color: #0066cc; 
       text-decoration: none; 
     }
     .section { 
-      margin-bottom: 20px; 
+      margin-bottom: 14px; 
     }
     .section-title { 
-      font-size: 14px; 
+      font-size: 12px; 
       font-weight: bold; 
-      color: #2c5aa0; 
+      color: #0066cc; 
       text-transform: uppercase; 
-      margin-bottom: 10px; 
-      padding-bottom: 4px; 
-      border-bottom: 1px solid #e0e0e0; 
+      margin-bottom: 8px; 
+      padding-bottom: 2px; 
+      border-bottom: 1px solid #ddd; 
     }
     .summary { 
-      text-align: justify; 
-      font-size: 12px; 
-      line-height: 1.45; 
+      font-size: 11px; 
+      line-height: 1.4; 
       color: #444; 
+      text-align: justify;
     }
     
-    /* Simple table layout for skills */
-    .skills-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 11px;
+    .skills-list {
+      margin-left: 0;
+      padding-left: 0;
     }
-    .skills-table td {
-      width: 50%;
-      padding: 6px 8px 6px 0;
-      vertical-align: top;
+    .skills-list li {
+      list-style: none;
+      margin-bottom: 4px;
+      font-size: 10px;
     }
     .skill-label { 
       font-weight: bold; 
-      color: #2c5aa0; 
+      color: #333; 
+      display: inline;
     }
     .skill-items { 
-      color: #555; 
-      line-height: 1.35; 
-    }
-    .academic-note { 
-      font-style: italic; 
       color: #666; 
-      font-size: 10px;
+      display: inline;
     }
     
     .job { 
-      margin-bottom: 16px; 
+      margin-bottom: 12px; 
     }
     .job-header { 
-      margin-bottom: 8px; 
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+    .job-left {
+      flex: 1;
     }
     .job-title { 
       font-weight: bold; 
-      color: #2c5aa0; 
+      color: #0066cc; 
       font-size: 12px; 
-      display: inline;
     }
     .job-company { 
       font-weight: bold; 
       color: #333; 
-      display: inline;
-      font-size: 12px;
+      font-size: 11px;
+    }
+    .job-location { 
+      color: #666; 
+      font-size: 10px;
+      font-style: italic;
     }
     .job-dates { 
-      font-size: 11px; 
+      font-size: 10px; 
       color: #666; 
-      font-style: italic; 
-      float: right;
+      font-weight: 500;
+      text-align: right;
     }
     .job-section { 
       margin-bottom: 8px; 
@@ -113,68 +121,58 @@
     .job-section-title { 
       font-weight: bold; 
       color: #444; 
-      font-size: 11px; 
-      margin-bottom: 4px; 
+      font-size: 10.5px; 
+      margin-bottom: 3px; 
     }
     .job-bullets { 
-      margin-left: 18px; 
+      margin-left: 16px; 
+      margin-top: 6px;
     }
     .job-bullets li { 
-      margin-bottom: 3px; 
-      font-size: 11px; 
-      line-height: 1.35; 
+      margin-bottom: 4px; 
+      font-size: 10.5px; 
+      line-height: 1.4; 
     }
     
     .education-item { 
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       margin-bottom: 10px; 
     }
-    .education-header { 
-      margin-bottom: 4px; 
+    .education-left {
+      flex: 1;
     }
     .degree { 
       font-weight: bold; 
-      color: #2c5aa0; 
-      font-size: 12px; 
-      display: inline;
+      color: #0066cc; 
+      font-size: 11px; 
     }
     .school { 
-      font-weight: bold; 
       color: #333; 
-      display: inline;
-      font-size: 12px;
+      font-size: 11px;
+    }
+    .education-details { 
+      color: #666; 
+      font-size: 10px;
+      font-style: italic; 
+      margin-top: 2px;
     }
     .education-dates { 
-      font-size: 11px; 
+      font-size: 10px; 
       color: #666; 
-      font-style: italic; 
-      float: right;
+      text-align: right;
     }
-    .specialization { 
-      font-size: 11px; 
-      color: #666; 
-      font-style: italic; 
-      margin-bottom: 3px;
-    }
-    
-    .achievements { 
-      margin-left: 18px; 
-    }
-    .achievements li { 
-      margin-bottom: 4px; 
-      font-size: 11px; 
-      line-height: 1.35; 
-    }
-    
-    .clear { clear: both; }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div class="name">Eric Wickstrom</div>
-      <div class="contact-info">Phoenix, AZ • 612-804-8628 • wickstrome@gmail.com</div>
-      <div class="contact-info">
-        <a href="https://github.com/ericwickstrom">github.com/ericwickstrom</a> •
+      <div class="title">Software Developer</div>
+      <div class="contact">
+        Phoenix, AZ • (612) 804-8628 • wickstrome@gmail.com<br>
+        <a href="https://github.com/ericwickstrom">github.com/ericwickstrom</a> • 
         <a href="https://linkedin.com/in/eric-wickstrom-876a19a0">linkedin.com/in/eric-wickstrom-876a19a0</a>
       </div>
     </div>
@@ -182,83 +180,55 @@
     <div class="section">
       <div class="section-title">Professional Summary</div>
       <div class="summary">
-        Experienced .NET Software Developer with 7 years of independent contracting experience specializing in legacy system modernization, enterprise application development, and mobile application support. Proven expertise in migrating VB.NET applications to WPF, developing desktop and web applications, and providing technical support for React Native mobile applications. Strong background in Microsoft technologies including .NET Framework, SQL Server, and integration with Dynamics GP, along with modern JavaScript frameworks. Skilled in working independently with minimal oversight while delivering maintainable solutions for complex business requirements in collaborative remote environments.
+        Software Developer with 7 years of independent contracting experience specializing in full-stack development and legacy system modernization. Proven expertise in .NET Framework to .NET Core migrations, desktop (WPF), web (ASP.NET, AngularJS), and mobile (React Native) applications. Strong background in SQL Server database design and enterprise system integration including Dynamics GP.
       </div>
     </div>
 
     <div class="section">
       <div class="section-title">Technical Skills</div>
-      <table class="skills-table">
-        <tr>
-          <td>
-            <span class="skill-label">Programming Languages:</span><br>
-            <span class="skill-items">C#, VB.NET, JavaScript, Python</span>
-          </td>
-          <td>
-            <span class="skill-label">Microsoft Technologies:</span><br>
-            <span class="skill-items">.NET Framework 4.6-4.8, WPF, ASP.NET</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="skill-label">Frontend Technologies:</span><br>
-            <span class="skill-items">React.js, React Native, AngularJS, Backbone.js, HTML, CSS</span>
-          </td>
-          <td>
-            <span class="skill-label">Database & ERP:</span><br>
-            <span class="skill-items">Microsoft SQL Server, T-SQL, Dynamics GP Integration</span>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="skill-label">Development Tools:</span><br>
-            <span class="skill-items">Visual Studio, Git, TFS, Entity Framework</span>
-          </td>
-          <td>
-            <span class="skill-label">Academic Experience:</span><br>
-            <span class="skill-items">Azure, AWS, .NET Core, Docker, Kubernetes</span>
-          </td>
-        </tr>
-      </table>
+      <ul class="skills-list">
+        <li><span class="skill-label">Core Technologies:</span> <span class="skill-items">C#, .NET (Framework/Core), Entity Framework, LINQ</span></li>
+        <li><span class="skill-label">Frontend:</span> <span class="skill-items">React.js, React Native, Angular/AngularJS, JavaScript, HTML, CSS</span></li>
+        <li><span class="skill-label">Database:</span> <span class="skill-items">SQL Server, T-SQL, JSON, Dynamics GP Integration</span></li>
+        <li><span class="skill-label">Development:</span> <span class="skill-items">Visual Studio, Git, Agile/Scrum, Testing (NUnit/MSTest/xUnit), Authentication, REST APIs</span></li>
+      </ul>
     </div>
 
     <div class="section">
       <div class="section-title">Professional Experience</div>
       <div class="job">
         <div class="job-header">
-          <span class="job-title">Software Developer (Independent Contractor)</span> | <span class="job-company">Runic Software LLC</span>
-          <span class="job-dates">Apr 2018 – Present</span>
-          <div class="clear"></div>
+          <div class="job-left">
+            <div class="job-title">Software Developer (Independent Contractor)</div>
+            <div class="job-company">Runic Software LLC</div>
+            <div class="job-location">Remote</div>
+          </div>
+          <div class="job-dates">Apr 2018 – Present</div>
         </div>
+        
         <div class="job-section">
           <div class="job-section-title">Bailey Nurseries</div>
           <ul class="job-bullets">
-            <li>Led migration of legacy VB.NET applications to modern WPF desktop applications, improving user experience and system maintainability</li>
-            <li>Developed new WPF applications from scratch using C#, .NET Framework, and SQL Server to support nursery operations and inventory management</li>
-            <li>Built and maintained web applications using AngularJS and ASP.NET to provide internal tools for staff and management</li>
-            <li>Designed and implemented data synchronization services to integrate internal systems with external platforms and third-party applications</li>
+            <li>Led migration of legacy VB applications to modern WPF desktop applications using C# and .NET Framework</li>
+            <li>Migrated applications from .NET Framework 4.8 to .NET Core</li>
+            <li>Developed new WPF applications (C#) for nursery operations and inventory management</li>
+            <li>Built web applications using AngularJS and ASP.NET to provide internal tools for staff and management</li>
+            <li>Built service layer for data synchronization between internal applications and external platforms</li>
             <li>Developed custom integrations with Microsoft Dynamics GP for financial and operational data exchange</li>
-            <li>Optimized SQL Server database performance and implemented efficient data access patterns using Entity Framework and T-SQL</li>
-            <li>Worked independently with minimal oversight while maintaining regular communication with stakeholders and end users</li>
-            <li>Provided ongoing support and enhancements for existing applications, troubleshooting issues and implementing feature requests</li>
           </ul>
         </div>
+        
         <div class="job-section">
           <div class="job-section-title">Malco Products</div>
           <ul class="job-bullets">
-            <li>Provided technical support and enhancements for internal React Native mobile application used by field technicians</li>
-            <li>Developed features and resolved issues using React Native and React.js for mobile and web platforms</li>
-            <li>Collaborated with technical teams to improve application functionality and user experience for mobile workforce</li>
-            <li>Troubleshot and debugged mobile application issues to ensure reliable performance in field environments</li>
+            <li>Developed features and resolved issues using React Native for mobile application</li>
           </ul>
         </div>
+        
         <div class="job-section">
           <div class="job-section-title">R&J Tours</div>
           <ul class="job-bullets">
-            <li>Developed tour management applications using .NET Framework and SQL Server to streamline booking and customer management processes</li>
-            <li>Created web interfaces using Backbone.js to provide real-time tour information and booking capabilities</li>
-            <li>Implemented data integration solutions to synchronize tour schedules and customer information across multiple systems</li>
-            <li>Collaborated with business owners to understand requirements and deliver solutions that improved operational efficiency</li>
+            <li>Developed tour management web application using .NET Framework and Backbone.js for booking and customer management</li>
           </ul>
         </div>
       </div>
@@ -267,33 +237,21 @@
     <div class="section">
       <div class="section-title">Education</div>
       <div class="education-item">
-        <div class="education-header">
-          <span class="degree">Master of Science, Computer Science</span> | <span class="school">Georgia Institute of Technology</span>
-          <span class="education-dates">2017 – 2023</span>
-          <div class="clear"></div>
+        <div class="education-left">
+          <div class="degree">Master of Science, Computer Science</div>
+          <div class="school">Georgia Institute of Technology</div>
+          <div class="education-details">Specialization: Interactive Intelligence (AI, ML, and Human-Computer Interaction)</div>
         </div>
-        <div class="specialization">Specialization: Interactive Intelligence (AI, ML, and Human-Computer Interaction)</div>
+        <div class="education-dates">2017 – 2023</div>
       </div>
       <div class="education-item">
-        <div class="education-header">
-          <span class="degree">Bachelor of Arts</span> | <span class="school">Bethel University</span>
-          <span class="education-dates">2001 – 2004</span>
-          <div class="clear"></div>
+        <div class="education-left">
+          <div class="degree">Bachelor of Arts</div>
+          <div class="school">Bethel University</div>
+          <div class="education-details">Majors: Computer Science, Philosophy • Minor: Mathematics</div>
         </div>
-        <div class="specialization">Majors: Computer Science, Philosophy. Minor: Mathematics</div>
+        <div class="education-dates">2001 – 2004</div>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Key Achievements</div>
-      <ul class="achievements">
-        <li>Successfully modernized multiple legacy VB.NET applications to WPF, reducing maintenance overhead and improving user satisfaction</li>
-        <li>Delivered comprehensive enterprise solutions integrating desktop applications, web interfaces, and mobile application support</li>
-        <li>Established reliable data integration between internal systems and Microsoft Dynamics GP, streamlining business operations</li>
-        <li>Maintained 7+ years of successful independent contracting with consistent client retention and project delivery</li>
-        <li>Developed expertise in both desktop and web application development, plus mobile application support with React Native</li>
-        <li>Completed advanced graduate coursework in AI, machine learning, and modern software development practices</li>
-      </ul>
     </div>
   </div>
 </body>
