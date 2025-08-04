@@ -1,260 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eric Wickstrom - Software Developer</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.4;
-      color: #333;
-      background: white;
-      font-size: 11px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eric Wickstrom - Cover Letter</title>
+<style>
+  body {
+    font-family: 'Times New Roman', serif;
+    background: #000080;
+    background-image: 
+      radial-gradient(circle at 20% 80%, #FF1493 10%, transparent 15%),
+      radial-gradient(circle at 80% 20%, #00FF00 8%, transparent 12%),
+      radial-gradient(circle at 40% 40%, #FFFF00 6%, transparent 10%),
+      linear-gradient(45deg, #FF0000 25%, transparent 25%, transparent 75%, #FF0000 75%),
+      linear-gradient(-45deg, #00FFFF 25%, transparent 25%, transparent 75%, #00FFFF 75%);
+    background-size: 200px 200px, 150px 150px, 100px 100px, 30px 30px, 30px 30px;
+    margin: 0;
+    padding: 0;
+    color: #FFFF00;
+    min-height: 100vh;
+    width: 8.5in;
+    max-width: 8.5in;
+    margin: 0 auto;
+  }
+  
+  /* Static stars */
+  .star {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  .star1 { top: 10%; left: 10%; }
+  .star2 { top: 20%; right: 15%; }
+  .star3 { bottom: 30%; left: 20%; }
+  .star4 { top: 40%; right: 25%; }
+  .star5 { top: 60%; left: 5%; }
+  .star6 { bottom: 40%; right: 10%; }
+  
+  /* Header banner */
+  .header-banner {
+    width: 100%;
+    background: #FF00FF;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 3px solid #FFFF00;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer banner */
+  .footer-banner {
+    width: 100%;
+    background: #000000;
+    color: #00FF00;
+    padding: 15px;
+    border: 3px ridge #00FF00;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    box-shadow: 5px 5px 0px #008000;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Main container */
+  .container {
+    max-width: 7.5in;
+    width: 7.5in;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 5px ridge #FF0000;
+    position: relative;
+    box-shadow: 10px 10px 0px #000000;
+    min-height: 10in;
+  }
+  
+  /* Header with rainbow gradient */
+  .header {
+    background: linear-gradient(45deg, #FF0000, #FFFF00, #00FF00, #00FFFF, #0000FF, #FF00FF, #FF0000);
+    background-size: 400% 400%;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #000000;
+  }
+  
+  .name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 
+      3px 3px 0px #000000, 
+      -3px -3px 0px #000000, 
+      3px -3px 0px #000000, 
+      -3px 3px 0px #000000,
+      6px 6px 0px #FF0000;
+    margin-bottom: 10px;
+    font-family: 'Comic Sans MS', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .contact-info {
+    font-size: 16px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border: 3px dashed #FF0000;
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .contact-info a {
+    color: #0000FF;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Content area */
+  .content {
+    padding: 0.5in;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,0,0.1) 10px,
+        rgba(255,255,0,0.1) 20px
+      ),
+      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><rect width="40" height="40" fill="%23FFFFFF"/><circle cx="20" cy="20" r="2" fill="%23CCCCCC"/><circle cx="10" cy="10" r="1" fill="%23FFCC00"/><circle cx="30" cy="30" r="1" fill="%23FF6699"/></svg>');
+  }
+  
+  .content strong {
+    color: #FF0000;
+    font-weight: bold;
+    text-decoration: underline;
+    background: #FFFF00;
+    padding: 2px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 20px;
+  }
+  
+  /* Special AI disclosure box */
+  .ai-box {
+    background: #FFFFFF;
+    border: 5px solid #FF0000;
+    padding: 25px;
+    margin: 25px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    box-shadow: 5px 5px 0px #000000;
+    line-height: 1.5;
+  }
+  
+  .ai-box strong {
+    color: #FF0000;
+    background: #FFFF00;
+    padding: 3px;
+    font-size: 18px;
+  }
+  
+  /* Under construction banner */
+  .construction {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        #FFFF00,
+        #FFFF00 10px,
+        #FF0000 10px,
+        #FF0000 20px
+      );
+    color: #000000;
+    padding: 8px 20px;
+    border: 3px solid #000000;
+    transform: rotate(15deg);
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0px #000000;
+  }
+  
+  /* Visitor counter */
+  .counter {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #000000;
+    color: #00FF00;
+    padding: 15px;
+    border: 3px ridge #00FF00;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    z-index: 999;
+    box-shadow: 5px 5px 0px #008000;
+  }
+  
+  /* Webring and buttons */
+  .webring {
+    text-align: center;
+    margin: 20px 0;
+    background: #C0C0C0;
+    border: 3px inset #C0C0C0;
+    padding: 15px;
+  }
+  
+  .button {
+    display: inline-block;
+    background: #C0C0C0;
+    border: 2px outset #C0C0C0;
+    padding: 5px 10px;
+    margin: 3px;
+    font-size: 12px;
+    font-family: 'MS Sans Serif', sans-serif;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* Dancing baby placeholder */
+  .dancing-baby {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 60px;
+    height: 80px;
+    background: #FFB6C1;
+    border: 2px solid #FF69B4;
+    border-radius: 30px 30px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotate(-10deg);
+  }
+  
+  /* Flame decorations */
+  .flame {
+    position: absolute;
+    font-size: 30px;
+  }
+  .flame1 { top: 15%; right: 5%; }
+  .flame2 { bottom: 25%; left: 3%; }
+  .flame3 { top: 50%; right: 2%; }
+  
+  /* Hit counter style numbers */
+  .big-number {
+    font-family: 'Impact', sans-serif;
+    font-size: 48px;
+    color: #FF0000;
+    text-shadow: 3px 3px 0px #000000;
+    display: inline-block;
+    background: #FFFF00;
+    padding: 10px;
+    border: 3px solid #000000;
+    margin: 0 5px;
+  }
+  
+  /* Print optimizations */
+  @media print {
+    .star, .dancing-baby, .flame { display: none !important; }
+    .header-banner, .footer-banner { display: block !important; }
+    body { 
+      background: white !important; 
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+      width: 8.5in !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
-    .container {
-      max-width: 8.5in;
-      margin: 0 auto;
-      padding: 0.4in;
+    .container { 
+      box-shadow: none !important; 
+      border: 2px solid #000000 !important;
+      width: 8.5in !important;
+      max-width: 8.5in !important;
+      margin: 0 !important;
+      min-height: 11in !important;
     }
-    .header { 
-      text-align: center; 
-      margin-bottom: 16px; 
-      padding-bottom: 12px; 
-      border-bottom: 2px solid #0066cc; 
+    .content {
+      padding: 1in !important;
     }
-    .name { 
-      font-size: 24px; 
-      font-weight: bold; 
-      color: #0066cc; 
-      margin-bottom: 8px; 
+    .name {
+      letter-spacing: normal !important;
     }
-    .title { 
-      font-size: 14px; 
-      color: #666; 
-      margin-bottom: 10px;
-      font-weight: 500;
+    * {
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
     }
-    .contact { 
-      font-size: 11px; 
-      color: #666; 
-    }
-    .contact a { 
-      color: #0066cc; 
-      text-decoration: none; 
-    }
-    .section { 
-      margin-bottom: 14px; 
-    }
-    .section-title { 
-      font-size: 12px; 
-      font-weight: bold; 
-      color: #0066cc; 
-      text-transform: uppercase; 
-      margin-bottom: 8px; 
-      padding-bottom: 2px; 
-      border-bottom: 1px solid #ddd; 
-    }
-    .summary { 
-      font-size: 11px; 
-      line-height: 1.4; 
-      color: #444; 
-      text-align: justify;
-    }
-    
-    .skills-list {
-      margin-left: 0;
-      padding-left: 0;
-    }
-    .skills-list li {
-      list-style: none;
-      margin-bottom: 4px;
-      font-size: 10px;
-    }
-    .skill-label { 
-      font-weight: bold; 
-      color: #333; 
-      display: inline;
-    }
-    .skill-items { 
-      color: #666; 
-      display: inline;
-    }
-    
-    .job { 
-      margin-bottom: 12px; 
-    }
-    .job-header { 
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 6px;
-    }
-    .job-left {
-      flex: 1;
-    }
-    .job-title { 
-      font-weight: bold; 
-      color: #0066cc; 
-      font-size: 12px; 
-    }
-    .job-company { 
-      font-weight: bold; 
-      color: #333; 
-      font-size: 11px;
-    }
-    .job-location { 
-      color: #666; 
-      font-size: 10px;
-      font-style: italic;
-    }
-    .job-dates { 
-      font-size: 10px; 
-      color: #666; 
-      font-weight: 500;
-      text-align: right;
-    }
-    .job-section { 
-      margin-bottom: 8px; 
-    }
-    .job-section-title { 
-      font-weight: bold; 
-      color: #444; 
-      font-size: 10.5px; 
-      margin-bottom: 3px; 
-    }
-    .job-bullets { 
-      margin-left: 16px; 
-      margin-top: 6px;
-    }
-    .job-bullets li { 
-      margin-bottom: 4px; 
-      font-size: 10.5px; 
-      line-height: 1.4; 
-    }
-    
-    .education-item { 
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 10px; 
-    }
-    .education-left {
-      flex: 1;
-    }
-    .degree { 
-      font-weight: bold; 
-      color: #0066cc; 
-      font-size: 11px; 
-    }
-    .school { 
-      color: #333; 
-      font-size: 11px;
-    }
-    .education-details { 
-      color: #666; 
-      font-size: 10px;
-      font-style: italic; 
-      margin-top: 2px;
-    }
-    .education-dates { 
-      font-size: 10px; 
-      color: #666; 
-      text-align: right;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
+  <!-- Top decoration bar -->
+  <div style="background: repeating-linear-gradient(90deg, #FF0000 0px, #FF0000 20px, #FFFF00 20px, #FFFF00 40px); height: 10px; width: 100%;"></div>
+  
+  <!-- Header banner -->
+  <div class="header-banner">
+    🌟 WELCOME TO ERIC'S GEOCITIES PAGE! 🌟 NOW HIRING! 🌟 BEST VIEWED IN NETSCAPE NAVIGATOR 3.0! 🌟 GUESTBOOK BELOW! 🌟
+  </div>
+  
+  <!-- Static stars everywhere -->
+  <div class="star star1">⭐</div>
+  <div class="star star2">✨</div>
+  <div class="star star3">🌟</div>
+  <div class="star star4">💫</div>
+  <div class="star star5">⭐</div>
+  <div class="star star6">✨</div>
+  
+  <!-- Dancing baby placeholder -->
+  <div class="dancing-baby">👶</div>
+  
+  <!-- Flame decorations -->
+  <div class="flame flame1">🔥</div>
+  <div class="flame flame2">🔥</div>
+  <div class="flame flame3">🔥</div>
+  
   <div class="container">
+    <div class="construction">🚧 HIRE ME! 🚧</div>
+    
     <div class="header">
-      <div class="name">Eric Wickstrom</div>
-      <div class="title">Software Developer</div>
-      <div class="contact">
-        Phoenix, AZ • (612) 804-8628 • wickstrome@gmail.com<br>
-        <a href="https://github.com/ericwickstrom">github.com/ericwickstrom</a> • 
-        <a href="https://linkedin.com/in/eric-wickstrom-876a19a0">linkedin.com/in/eric-wickstrom-876a19a0</a>
+      <div class="name">ERIC WICKSTROM</div>
+      <div style="color: #FFFFFF; font-family: 'Comic Sans MS'; font-size: 18px; margin: 10px 0;">
+        ✨ PROFESSIONAL SOFTWARE WIZARD ✨
+      </div>
+      <div class="contact-info">
+        📍 Phoenix, AZ • ☎️ (612) 804-8628 • 📧 wickstrome@gmail.com<br>
+        🔗 <a href="https://github.com/ericwickstrom">github.com/ericwickstrom</a> • 
+        💼 <a href="https://linkedin.com/in/eric-wickstrom-876a19a0">LinkedIn Profile</a>
       </div>
     </div>
-
-    <div class="section">
-      <div class="section-title">Professional Summary</div>
-      <div class="summary">
-        Software Developer with 7 years of experience building backend systems, internal tooling, and automation solutions for complex organizational workflows. Proven expertise in JavaScript, SQL, and systematic problem-solving with a track record of creating clean, well-documented code. Strong background in designing data-driven systems and modernizing legacy infrastructure to improve operational efficiency across desktop, web, and mobile platforms.
+    
+    <div class="content">
+      <div style="text-align: center; margin: 20px 0;">
+        <span class="big-number">H</span>
+        <span class="big-number">I</span>
+        <span class="big-number">R</span>
+        <span class="big-number">E</span>
+        <span style="margin: 0 10px;">🎯</span>
+        <span class="big-number">M</span>
+        <span class="big-number">E</span>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Technical Skills</div>
-      <ul class="skills-list">
-        <li><span class="skill-label">Programming Languages:</span> <span class="skill-items">JavaScript, C#, Python (learning), SQL, HTML, CSS</span></li>
-        <li><span class="skill-label">Backend & Systems:</span> <span class="skill-items">REST APIs, .NET (Framework/Core), Internal Tooling, Automation, System Integration</span></li>
-        <li><span class="skill-label">Database:</span> <span class="skill-items">SQL Server, T-SQL, Data Processing, Complex Query Writing</span></li>
-        <li><span class="skill-label">Development:</span> <span class="skill-items">Git, Systematic Documentation, Agile Workflows, Testing, Problem-solving</span></li>
-        <li><span class="skill-label">Emerging Technologies:</span> <span class="skill-items">AI/ML Systems (academic background), Cloud Platforms (learning), Progressive Tech Applications</span></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Professional Experience</div>
-      <div class="job">
-        <div class="job-header">
-          <div class="job-left">
-            <div class="job-title">Software Developer (Independent Contractor)</div>
-            <div class="job-company">Runic Software LLC</div>
-            <div class="job-location">Remote</div>
-          </div>
-          <div class="job-dates">Apr 2018 – Present</div>
-        </div>
-        
-        <div class="job-section">
-          <div class="job-section-title">Bailey Nurseries</div>
-          <ul class="job-bullets">
-            <li>Built internal tooling and automation systems to modernize legacy VB applications, improving team workflows and operational efficiency</li>
-            <li>Developed backend systems and APIs using C# and .NET Framework to support data-driven organizational processes</li>
-            <li>Created systematic automation solutions for data synchronization between internal applications and external platforms</li>
-            <li>Designed and implemented web-based internal tools using JavaScript and AngularJS to streamline staff and management workflows</li>
-            <li>Built comprehensive data processing pipelines with SQL Server, including stored procedures and complex queries for operational insights</li>
-            <li>Maintained clean, well-documented code and systematic documentation practices throughout all projects</li>
-            <li>Applied systematic approach to complex technical challenges, defining clear goals and documenting outcomes for legacy system migrations</li>
-          </ul>
-        </div>
-        
-        <div class="job-section">
-          <div class="job-section-title">Malco Products</div>
-          <ul class="job-bullets">
-            <li>Developed backend features and automation solutions using React Native for mobile application workflows</li>
-          </ul>
-        </div>
-        
-        <div class="job-section">
-          <div class="job-section-title">R&J Tours</div>
-          <ul class="job-bullets">
-            <li>Built comprehensive backend management system using .NET Framework and JavaScript for booking workflow automation and customer data processing</li>
-          </ul>
-        </div>
+      
+      <p><strong>Corporate Tools Hiring Team</strong><br>
+      Internal Applications Developer Position</p>
+      
+      <div class="ai-box">
+        <strong>🤖 FULL DISCLOSURE:</strong> This cover letter was crafted by Claude (Anthropic's AI) because let's be honest—who actually reads cover letters anymore? But if you're reading this, you're clearly someone who pays attention to details, which means you're probably cool. Also, the fact that I'm being transparent about using AI probably tells you something about my personality and approach to modern development tools.
       </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">Education</div>
-      <div class="education-item">
-        <div class="education-left">
-          <div class="degree">Master of Science, Computer Science</div>
-          <div class="school">Georgia Institute of Technology</div>
-          <div class="education-details">Specialization: Interactive Intelligence (AI, ML, and Human-Computer Interaction)</div>
-        </div>
-        <div class="education-dates">2017 – 2023</div>
+      
+      <p>Dear Hiring Manager,</p>
+      
+      <p>I'm writing to express my strong interest in the Internal Applications Developer position at Corporate Tools. Your job description perfectly captures my professional journey—transitioning from IT foundations into software development while maintaining that "holistic approach to technology" you're seeking. After seven years as an independent contractor specializing in legacy system modernization and full-stack development, I'm excited about the opportunity to apply my skills to build internal tools that genuinely benefit employees.</p>
+      
+      <p>What draws me to Corporate Tools is your exceptional workplace culture. With 97% employee satisfaction and your emphasis on treating people like adults with real autonomy, you've created something rare in tech. Your description of wanting someone who's "even-keeled, go with the flow" and doesn't need to change their personality for work resonates deeply—that's exactly the environment where I do my best work.</p>
+      
+      <p>My experience aligns strongly with your technical requirements:</p>
+      
+      <p><strong>Full-Stack Development Expertise</strong>: While my primary experience is in C# and .NET, I've worked extensively across the technology stack—from desktop WPF applications to web development with AngularJS/ASP.NET to mobile apps with React Native. This breadth gives me the foundation to quickly adapt to Python/Go and Django frameworks you're using.</p>
+      
+      <p><strong>IT-to-Development Background</strong>: Like the profile you described, I understand both the code and the infrastructure it runs on. My work with legacy system migrations—including .NET Framework to .NET Core conversions—has taught me to think holistically about technical solutions and their operational impact.</p>
+      
+      <p><strong>Independent Project Ownership</strong>: Seven years of contracting has honed my ability to take projects from conception to deployment independently. Whether developing custom Dynamics GP integrations for Bailey Nurseries or building tour management systems for R&J Tours, I've consistently delivered solutions that meet business objectives while maintaining code quality.</p>
+      
+      <p><strong>Problem-Solving Mindset</strong>: Your mention of building "crazy, and sometimes maybe even dumb tools just to see what they can do" made me smile. That experimental approach to development—pushing boundaries to understand what's possible—has been central to my success in modernizing legacy systems and creating innovative solutions.</p>
+      
+      <p>My Master's in Computer Science from Georgia Tech, with a specialization in Interactive Intelligence, reinforced my analytical problem-solving skills and introduced me to cutting-edge development practices. Combined with my contracting experience across diverse industries, I bring both the technical depth and practical business understanding to create tools that truly serve your team's needs.</p>
+      
+      <p>I'm particularly excited about Corporate Tools' remote-first culture and your focus on work-life balance. The comprehensive benefits package and progressive PTO policy demonstrate a genuine commitment to employee wellbeing that aligns with my values. Your stable, debt-free company structure offers the security and growth potential I'm seeking as I transition from contracting to a full-time role.</p>
+      
+      <p>I'd welcome the opportunity to discuss how my background in legacy modernization, full-stack development, and independent project management can contribute to Corporate Tools' internal development goals. Thank you for considering my application.</p>
+      
+      <p><strong>Best regards,</strong><br>
+      Eric Wickstrom</p>
+      
+      <div class="webring">
+        <strong>🌐 ERIC'S WEBRING 🌐</strong><br>
+        <a href="#" class="button">⬅️ PREV</a>
+        <a href="#" class="button">🎲 RANDOM</a>
+        <a href="#" class="button">➡️ NEXT</a>
+        <a href="#" class="button">📝 GUESTBOOK</a>
+        <a href="#" class="button">📊 STATS</a>
       </div>
-      <div class="education-item">
-        <div class="education-left">
-          <div class="degree">Bachelor of Arts</div>
-          <div class="school">Bethel University</div>
-          <div class="education-details">Majors: Computer Science, Philosophy • Minor: Mathematics</div>
-        </div>
-        <div class="education-dates">2001 – 2004</div>
-      </div>
+      
+      <p style="text-align: center; margin-top: 30px; font-size: 12px; color: #666; background: #FFFF00; padding: 10px; border: 2px dashed #FF0000;">
+        <strong>Made with ❤️ and Netscape Composer • Best viewed at 800x600 • Email me for the HTML source code!</strong><br>
+        <em>This site is part of the Professional Developer Webring</em>
+      </p>
     </div>
   </div>
+  
+  <!-- Footer banner -->
+  <div class="footer-banner">
+    👀 You are visitor #<span style="color: #FFFF00;">1,337,420</span><br>
+    <span style="color: #FF0000;">●</span> ONLINE NOW <span style="color: #FF0000;">●</span> | Last updated: TODAY!<br>
+    Made with ❤️ and Netscape Composer • Best viewed at 800x600
+  </div>
+  
+  <!-- Bottom decoration bar -->
+  <div style="background: repeating-linear-gradient(90deg, #00FF00 0px, #00FF00 20px, #FF00FF 20px, #FF00FF 40px); height: 10px; width: 100%;"></div>
 </body>
 </html>
