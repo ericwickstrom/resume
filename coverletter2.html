@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>~~~ERIC'S TOTALLY RADICAL COVER LETTER~~~</title>
+    <style>
+        body {
+            background: #ff6b6b;
+            font-family: Comic Sans MS, cursive;
+            margin: 0;
+            padding: 10px;
+            color: #000080;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #FFFF99;
+            border: 3px dashed #FF0080;
+            padding: 15px;
+            box-shadow: 5px 5px 0px #800080;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨🌟⭐✨";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #FF00FF;
+            color: #FFFF00;
+            text-align: center;
+            font-size: 8px;
+            padding: 2px;
+            z-index: 1;
+        }
+        
+        .main-content {
+            margin-top: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FF0000;
+            font-size: 18px;
+            text-shadow: 2px 2px #FFFF00;
+            margin: 5px 0;
+            text-decoration: underline;
+            background: linear-gradient(45deg, #FF69B4, #00FFFF);
+            padding: 5px;
+            border: 2px solid #FF0000;
+        }
+        
+        .header-info {
+            text-align: center;
+            background: #00FFFF;
+            border: 2px solid #FF0000;
+            padding: 8px;
+            margin: 8px 0;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .left-column, .right-column {
+            background: #FFFFFF;
+            border: 2px solid #0000FF;
+            padding: 8px;
+            margin: 8px 0;
+            position: relative;
+        }
+        
+        .left-column::before {
+            content: "💻🖥️💾💻🖥️💾";
+            position: absolute;
+            top: -10px;
+            left: 5px;
+            background: #FFFF00;
+            padding: 2px 5px;
+            border: 1px solid #FF0000;
+            font-size: 8px;
+        }
+        
+        .right-column {
+            background: #FFB6C1;
+            border: 2px solid #800080;
+        }
+        
+        .right-column::before {
+            content: "🚀⚡🔥🚀⚡🔥";
+            position: absolute;
+            top: -10px;
+            right: 5px;
+            background: #00FF00;
+            padding: 2px 5px;
+            border: 1px solid #FF0000;
+            font-size: 8px;
+        }
+        
+        .rainbow-text {
+            background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #8000ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .footer {
+            text-align: center;
+            background: #FF69B4;
+            border: 2px solid #00FF00;
+            padding: 5px;
+            margin-top: 8px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        
+        .retro-link {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        
+        .section-title {
+            color: #FF0000;
+            font-weight: bold;
+            font-size: 12px;
+            margin: 5px 0 3px 0;
+            text-decoration: underline;
+        }
+        
+        p {
+            margin: 5px 0;
+            line-height: 1.3;
+        }
+        
+        .visitor-counter {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            color: #FF0000;
+            font-size: 8px;
+            background: #FFFF00;
+            padding: 2px;
+            border: 1px solid #000000;
+        }
+        
+        .flame-border {
+            border: 3px solid #FF4500;
+            background: linear-gradient(45deg, #FF6347, #FFD700);
+            padding: 3px;
+            margin: 3px 0;
+        }
+        
+        .cyber-box {
+            background: #000000;
+            color: #00FF00;
+            border: 1px solid #00FFFF;
+            padding: 3px;
+            font-family: monospace;
+            font-size: 9px;
+            margin: 3px 0;
+        }
+        
+        /* Force backgrounds to print */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            body {
+                background: #ff6b6b !important;
+                font-size: 10px !important;
+            }
+            
+            .container {
+                background: #FFFF99 !important;
+                border: 3px dashed #FF0080 !important;
+                box-shadow: 5px 5px 0px #800080 !important;
+                page-break-inside: avoid !important;
+            }
+            
+            .header-info {
+                background: #00FFFF !important;
+                border: 2px solid #FF0000 !important;
+            }
+            
+            .left-column, .right-column {
+                background: #FFFFFF !important;
+                border: 2px solid #0000FF !important;
+            }
+            
+            .right-column {
+                background: #FFB6C1 !important;
+                border: 2px solid #800080 !important;
+            }
+            
+            .footer {
+                background: #FF69B4 !important;
+                border: 2px solid #00FF00 !important;
+            }
+            
+            .flame-border {
+                background: linear-gradient(45deg, #FF6347, #FFD700) !important;
+                border: 3px solid #FF4500 !important;
+            }
+            
+            .cyber-box {
+                background: #000000 !important;
+                color: #00FF00 !important;
+                border: 1px solid #00FFFF !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>🌟 ERIC'S TOTALLY RADICAL COVER LETTER 🌟</h1>
+            
+            <div class="header-info">
+                ✨ <strong>ERIC WICKSTROM</strong> ✨<br>
+                Surprise, AZ | 612.804.8628 | eric.wickstrom@outlook.com<br>
+                <a href="https://www.linkedin.com/in/eric-wickstrom-876a19a0/" class="retro-link">https://www.linkedin.com/in/eric-wickstrom-876a19a0/</a> | <a href="#" class="retro-link">https://github.com/ericwickstrom</a>
+            </div>
+            
+            <div class="flame-border">
+                <p class="rainbow-text">Dropbox Hiring Team - Intern/p>
+                <p><strong>Dear Dropbox Team,</strong></p>
+                <p>I'm excited to apply for the Full Stack Engineer position! I'm drawn to Dropbox's focus on building great products that solve real problems and your commitment to quality engineering practices.</p>
+            </div>
+            
+            <div class="left-column">
+                <div class="section-title">🖥️ THE ORIGIN STORY 🖥️</div>
+                <p>My passion for computers started young—I learned BASIC on a <strong style="color: #FF0000;">Tandy 1000</strong> and was so drawn to our new internet connection on our <strong style="color: #0000FF;">Packard Bell</strong> that I quit my part-time farm job to spend more time exploring it!</p>
+                
+                <p>This led to studying Computer Science and Philosophy in college, then eventually earning my Master's in Computer Science from <strong style="color: #B8860B;">Georgia Tech</strong> with a focus on Interactive Intelligence.</p>
+                
+                <div class="cyber-box">
+                    &gt; SKILL_LEVEL: EXPERT<br>
+                    &gt; YEARS_EXPERIENCE: 7+<br>
+                    &gt; PASSION_LEVEL: MAXIMUM
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="section-title">💻 THE EXPERIENCE 💻</div>
+                <p>Over the past 7 years at Runic Software, I've specialized in full-stack development—migrating legacy applications to modern frameworks, building web applications, and developing desktop applications in WPF.</p>
+
+                <div class="section-title">🎯 WHY Dropbox 🎯</div>
+                <p>Your core values align perfectly with how I approach development. I believe in engaging with humility, investing in team success through collaboration and code reviews, and always focusing on customer impact.</p>
+            </div>
+            
+            <div class="flame-border">
+                <p>I'd love to discuss how my experience and passion for solving real problems can contribute to Dropbox's mission. Thank you for your consideration!</p>
+                <p><strong>Sincerely,</strong><br>
+                <span style="font-size: xx-large; color: greenyellow;">Eric Wickstrom</span></p>
+            </div>
+            
+            <div class="footer">
+                🚀 HIRE ME! 🚀<br>
+                <small>This website was made with 💖 and nostalgia for the AWESOME 90s internet!</small>
+            </div>
+        </div>
+        
+        <div class="visitor-counter">
+            🔥 VISITOR #001337 🔥
+        </div>
+    </div>
+</body>
+</html>
